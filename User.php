@@ -26,7 +26,7 @@
     <p id="date"></p>
     <p id="time"></p>
     <div class="dropdown" style="margin-left: 2%; margin-right: 4%;">
-    	 <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome,
+    	 <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome User
     	 	
     	 	<span class="caret"></span></a>
     	 	<ul class="dropdown-menu" style="min-width: 0px;">
@@ -35,17 +35,23 @@
     </div>
  </nav>
 
-<section id="Login_as">
-      <div id="Judul">
-         <h2>Selamat datang di Antar.In</h2>
-         <h3>Sistem Informasi Pengiriman Barang Kekinian~</h3>
+<section id="Layanan">
+      <div id="Judul" style="text-align: center; margin-top: 5%;">
+         <h2>Selamat datang!</h2>
+         <h3>Silahkan Pilih Layanan Kami</h3>
+      </div>
+
+      <div class="fotoLayanan row">
+        <img src="assets/harga.png">
+        <img src="assets/kirim.png">
+         <img src="assets/status.jpg">
       </div>
     <br>
     
-        <div class="Login row">
-             <a href="User.php" class="col-lg-2 col-xs-9" id="user" style="border:2px solid #3ce819;">Masuk sebagai User</a>
-             <a href="#" class="col-lg-2 col-xs-9" id="admin"  style="border:2px solid #12a8bb">Masuk sebagai Admin</a>
-             <a href="#" class="col-lg-2 col-xs-9" id="manager" style="border:2px solid #d3e818;">Masuk sebagai Manager</a>
+        <div class="Layanan row">
+             <a href="#" class="col-lg-2 col-xs-9" id="harga" style="border:2px solid #3ce819;">Cek harga</a>
+             <a href="#" class="col-lg-2 col-xs-9" id="kirim"  style="border:2px solid #12a8bb">Kirim barang</a>
+             <a href="#" class="col-lg-2 col-xs-9" id="status" style="border:2px solid #d3e818;">Cek status pengiriman</a>
         </div>
     
 </section>
