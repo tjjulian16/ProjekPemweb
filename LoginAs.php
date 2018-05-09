@@ -36,6 +36,7 @@
  </nav>
 
 <section id="Login_as">
+    <div class="container-fluid">
       <div id="Judul">
          <h2>Selamat datang di Antar.In</h2>
          <h3>Sistem Informasi Pengiriman Barang Kekinian~</h3>
@@ -47,7 +48,7 @@
              <a href="#" class="col-lg-2 col-xs-9" id="admin"  style="border:2px solid #12a8bb">Masuk sebagai Admin</a>
              <a href="#" class="col-lg-2 col-xs-9" id="manager" style="border:2px solid #d3e818;">Masuk sebagai Manager</a>
         </div>
-    
+     </div>
 </section>
 </body>
 

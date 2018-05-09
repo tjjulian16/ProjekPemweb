@@ -17,7 +17,7 @@
 	
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
 	<img src="assets/logo.png" width="auto" height="35">
-  <a class="navbar-brand" href="#" style="margin-left: 1%;">Antar.in</a>
+  <a class="navbar-brand" href="LoginAs.php" style="margin-left: 1%;">Antar.in</a>
     <ul class="navbar-nav mr-auto">
 
     <!-- buat konten navbar nya
@@ -36,24 +36,51 @@
  </nav>
 
 <section id="Layanan">
-      <div id="Judul" style="text-align: center; margin-top: 5%;">
+  <div class="container-fluid">
+      <div id="Judul">
          <h2>Selamat datang!</h2>
          <h3>Silahkan Pilih Layanan Kami</h3>
       </div>
 
-      <div class="fotoLayanan row">
-        <img src="assets/harga.png">
-        <img src="assets/kirim.png">
-         <img src="assets/status.jpg">
+<div class="row">
+  <div class="col-lg-4 col-sm-12">
+    <div class="card">
+      <img src="assets/harga.png" >
+      <div class="card-body" >
+        <a href="#" class="btn btn-lg btn-primary">Cek harga</a>
+        <br><br>
+        <p class="card-text">Klik disini untuk melihat ongkos kirim dari Antar.in</p>
+        
       </div>
-    <br>
-    
-        <div class="Layanan row">
-             <a href="#" class="col-lg-2 col-xs-9" id="harga" style="border:2px solid #3ce819;">Cek harga</a>
-             <a href="#" class="col-lg-2 col-xs-9" id="kirim"  style="border:2px solid #12a8bb">Kirim barang</a>
-             <a href="#" class="col-lg-2 col-xs-9" id="status" style="border:2px solid #d3e818;">Cek status pengiriman</a>
-        </div>
-    
+    </div>
+  </div>
+  <div class="col-lg-4 col-sm-12">
+    <div class="card">
+      <img src="assets/kirim.png">
+      <div class="card-body" >
+        <a href="#" class="btn btn-lg btn-primary" >Kirim barang</a>
+        <br><br>
+        <p class="card-text">Klik disini untuk mengirim barang melalui Antar.in</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-sm-12">
+    <div class="card">
+      <img src="assets/status.jpg" style="width: 43%; margin-left: 27%;">
+      <div class="card-body" >
+        <a href="#" class="btn btn-lg btn-primary">Cek status</a>
+        <br><br>
+        <p class="card-text">Klik disini untuk melihat status pengiriman anda</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+       
+    </div>
 </section>
 </body>
 

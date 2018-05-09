@@ -12,12 +12,11 @@
 	margin-top: 10%;
 
 }
-.fotoLayanan img{
-	height: 200px;
-	width:  auto;
-	margin: 2% 0 1% 15%;
+
+#Layanan #Judul{
+	text-align: center; margin-top: 2%; margin-bottom: 5%;
 }
-.Login a,.Layanan a{
+.Login a {
 	background-color:white;
 	padding: 15px;
 	border-radius: 20px;
@@ -29,18 +28,32 @@
 	margin-bottom: 5%;
 }
 
-.Login a:hover, .Layanan a:hover{
+.Login a:hover {
 	 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 	 transition-duration: 0.5s;
 	 color: white;
 	 text-decoration: none;
 }
-.Login  #user:hover, .Layanan #harga:hover{
+.Login  #user:hover {
 	background-color: #3ce819;
 }
-.Login #admin:hover, .Layanan #kirim:hover{
+.Login #admin:hover {
 	background-color: #12a8bb;
 }
-.Login #manager:hover, .Layanan #status:hover{
+.Login #manager:hover {
 	background-color: #d3e818;
+}
+
+#Layanan .card-body{
+	text-align: center; border-top: 1px solid grey;
+}
+
+#Layanan .card img{
+	height: auto;
+  width: 60%;
+  margin: 2% 2% 2% 18%;
+}
+
+#Layanan .btn{
+width: 50%; height: auto;
 }
