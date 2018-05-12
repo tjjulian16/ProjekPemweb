@@ -17,7 +17,7 @@
 	
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
 	<img src="assets/logo.png" width="auto" height="35">
-  <a class="navbar-brand" href="#" style="margin-left: 1%;">Antar.in</a>
+  <a class="navbar-brand" href="LandingPage.php" style="margin-left: 1%;">Antar.in</a>
     <ul class="navbar-nav mr-auto">
 
     <!-- buat konten navbar nya
@@ -30,7 +30,7 @@
     	 	
     	 	<span class="caret"></span></a>
     	 	<ul class="dropdown-menu" style="min-width: 0px;">
-            <li><a href="#"><span class="fa fa-sign-out "></span> Keluar</a></li>
+            <li><a href="LandingPage.php"><span class="fa fa-sign-out "></span> Keluar</a></li>
           </ul>
     </div>
  </nav>
@@ -45,8 +45,8 @@
     
         <div class="Login row">
              <a href="User.php" class="col-lg-2 col-xs-9" id="user" style="border:2px solid #3ce819;">Masuk sebagai User</a>
-             <a href="#" class="col-lg-2 col-xs-9" id="admin"  style="border:2px solid #12a8bb">Masuk sebagai Admin</a>
-             <a href="#" class="col-lg-2 col-xs-9" id="manager" style="border:2px solid #d3e818;">Masuk sebagai Manager</a>
+             <a href="login.php" class="col-lg-2 col-xs-9" id="admin"  style="border:2px solid #12a8bb">Masuk sebagai Admin</a>
+             <a href="login.php" class="col-lg-2 col-xs-9" id="manager" style="border:2px solid #d3e818;">Masuk sebagai Manager</a>
         </div>
      </div>
 </section>

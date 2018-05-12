@@ -16,8 +16,8 @@
 <body onload="startTime()">
 	
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
-	<img src="assets/logo.png" width="auto" height="35">
-  <a class="navbar-brand" href="LoginAs.php" style="margin-left: 1%;">Antar.in</a>
+  <img src="assets/logo.png" width="auto" height="35">
+  <a class="navbar-brand" href="LandingPage.php" style="margin-left: 1%;">Antar.in</a>
     <ul class="navbar-nav mr-auto">
 
     <!-- buat konten navbar nya
@@ -26,17 +26,17 @@
     <p id="date"></p>
     <p id="time"></p>
     <div class="dropdown" style="margin-left: 2%; margin-right: 4%;">
-    	 <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome User
-    	 	
-    	 	<span class="caret"></span></a>
-    	 	<ul class="dropdown-menu" style="min-width: 0px;">
-            <li><a href="#"><span class="fa fa-sign-out "></span> Keluar</a></li>
+       <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome, User
+        
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu" style="min-width: 0px;">
+            <li><a href="LandingPage.php"><span class="fa fa-sign-out "></span> Keluar</a></li>
           </ul>
     </div>
  </nav>
 
 <section id="Layanan">
-  <div class="container-fluid">
+  <div class="container-fluid" style="margin-bottom: 5%;">
       <div id="Judul">
          <h2>Selamat datang!</h2>
          <h3>Silahkan Pilih Layanan Kami</h3>
@@ -47,7 +47,7 @@
     <div class="card">
       <img src="assets/harga.png" >
       <div class="card-body" >
-        <a href="#" class="btn btn-lg btn-primary">Cek harga</a>
+        <a href="CekHarga.php" class="btn btn-lg btn-primary">Cek harga</a>
         <br><br>
         <p class="card-text">Klik disini untuk melihat ongkos kirim dari Antar.in</p>
         
@@ -58,7 +58,7 @@
     <div class="card">
       <img src="assets/kirim.png">
       <div class="card-body" >
-        <a href="#" class="btn btn-lg btn-primary" >Kirim barang</a>
+        <a href="formKirim.php" class="btn btn-lg btn-primary" >Kirim barang</a>
         <br><br>
         <p class="card-text">Klik disini untuk mengirim barang melalui Antar.in</p>
         
@@ -70,7 +70,7 @@
     <div class="card">
       <img src="assets/status.jpg" style="width: 43%; margin-left: 27%;">
       <div class="card-body" >
-        <a href="#" class="btn btn-lg btn-primary">Cek status</a>
+        <a href="CekStatus.php" class="btn btn-lg btn-primary">Cek status</a>
         <br><br>
         <p class="card-text">Klik disini untuk melihat status pengiriman anda</p>
         

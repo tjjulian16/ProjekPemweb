@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +27,8 @@
 <body onload="startTime()">
 	
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
-	<img src="assets/logo.png" width="auto" height="35">
-  <a class="navbar-brand" href="#" style="margin-left: 1%;">Antar.in</a>
+  <img src="assets/logo.png" width="auto" height="35">
+  <a class="navbar-brand" href="LandingPage.php" style="margin-left: 1%;">Antar.in</a>
     <ul class="navbar-nav mr-auto">
 
     <!-- buat konten navbar nya
@@ -36,11 +37,11 @@
     <p id="date"></p>
     <p id="time"></p>
     <div class="dropdown" style="margin-left: 2%; margin-right: 4%;">
-    	 <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome User
-    	 	
-    	 	<span class="caret"></span></a>
-    	 	<ul class="dropdown-menu" style="min-width: 0px;">
-            <li><a href="#"><span class="fa fa-sign-out "></span> Keluar</a></li>
+       <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome, User
+        
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu" style="min-width: 0px;">
+            <li><a href="LandingPage.php"><span class="fa fa-sign-out "></span> Keluar</a></li>
           </ul>
     </div>
  </nav>
@@ -58,7 +59,7 @@
                     
                     <h3 style="text-align: center;">Data Pengirim</h3>
                         <div>
-                                <form  action="simpanData" method="post">
+                                <form  action="controllerDatabase.php" method="post">
                                     <div class="form-group">
                                         <label for="text">Nama Lengkap:</label>
                                         <input type="text" class="form-control" name="namaPengirim" required>
@@ -69,16 +70,17 @@
                                         <div class="row">
                                         <div class="col-md-6">
                                         <label>Provinsi</label>
-                                        <select class="form-control" name="provinsiAsal" style="height: calc(2.25rem + 10px)" >
-                                         
-                                         <option value="Jawa Timur">Jawat Timur</option>
-                                        <option value="Jawa Barat">Jawa Barat</option>
+                                        <select class="form-control" name="provinsiAsal" style="height: calc(2.25rem + 10px)" required >
+                                         <option disabled selected value style="display: none;">Pilih Provinsi</option>
+                                         <option value="Jawa Timur">Jawa Timur</option>
+                                        <option value="DKI Jakarta">DKI Jakarta</option>
                                         </select>
                                         </div>
 
                                         <div class="col-md-6">
                                         <label for="Kota">Kota Asal</label>
-                                        <select class="form-control" name="kotaAsal" style="height: calc(2.25rem + 10px)">
+                                        <select class="form-control" name="kotaAsal" style="height: calc(2.25rem + 10px)" required>
+                                          <option disabled selected value style="display: none;">Pilih Kota</option>
                                          <option value="Malang">Malang</option>
                                          <option value="Surabaya">Surabaya</option>
                                          <option value="Jakarta">Jakarta</option>
@@ -103,8 +105,7 @@
                                       
                             </div>
                         </div>
-
-            <div class="col-md-5 formKanan" >
+                        <div class="col-md-5 formKanan" >
                     
                     <h3 style="text-align: center;">Data Penerima</h3>
                         <div>
@@ -119,17 +120,18 @@
                                         <div class="row">
                                         <div class="col-md-6">
                                         <label>Provinsi</label>
-                                        <select class="form-control" name="provinsiTujuan" style="height: calc(2.25rem + 10px)" >
-                                         
-                                         <option value="Jawa Timur">Jawat Timur</option>
-                                        <option value="Jawa Barat">Jawa Barat</option>
+                                        <select class="form-control" name="provinsiTujuan" style="height: calc(2.25rem + 10px)" required>
+                                         <option disabled selected value style="display: none;">Pilih Provinsi</option>
+                                         <option value="Jawa Timur">Jawa Timur</option>
+                                        <option value="DKI Jakarta">DKI Jakarta</option>
                                         </select>
                                         </div>
                                         
 
                                         <div class="col-md-6">
                                         <label for="Kota">Kota Asal</label>
-                                        <select class="form-control" name="kotaTujuan" style="height: calc(2.25rem + 10px)">
+                                        <select class="form-control" name="kotaTujuan" style="height: calc(2.25rem + 10px)" required>
+                                          <option disabled selected value style="display: none;">Pilih Kota</option>
                                          <option value="Malang">Malang</option>
                                          <option value="Surabaya">Surabaya</option>
                                          <option value="Jakarta">Jakarta</option>
@@ -156,6 +158,8 @@
                             </div>
                      </div>
                 </div>
+
+            
                               
           </div>
 
@@ -177,7 +181,8 @@
 
                                         <div class="col-md-6">
                                         <label for="paket">Paket layanan</label>
-                                        <select class="form-control" name="Paket" style="height: calc(2.25rem + 10px)">
+                                        <select class="form-control" name="Paket" style="height: calc(2.25rem + 10px)" required>
+                                          <option disabled selected value style="display: none;">Pilih Layanan</option>
                                          <option value="Cepat">Cepat (1-3 hari) </option>
                                          <option value="Regular">Regular (3-5 hari)</option>
                                          
@@ -185,7 +190,7 @@
                                         </div>
                                         <div class="col-md-6">
                                           <label for="text">Berat Barang (kg) :</label>
-                                        <input type="tel" class="form-control" name="berat" required>
+                                        <input type="number" min=1 max=999 class="form-control" name="berat" required>
                                       </div>
                                       </div>
                                       <br>
@@ -197,19 +202,42 @@
                             </div>
                       <div class="col-md-5" style="margin-left: 5%; margin-top: 5%;">
                           <div>
-                                <button type="Submit" class="btn btn-lg submitButton">Submit</a>
+                                <button type="button" class="btn btn-lg submitButton" data-toggle = "modal" data-target="#notif">Submit
                                 </button>
-                              </form>
+                             
                             </div>
+
+                            <div class="modal fade" id="notif" role="dialog">
+                                            <div class="modal-dialog modal-sm">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  
+                                                  <h4 class="modal-title">Apakah Anda Ingin Submit Pesanan?</h4>
+                                                </div>
+                                                
+                                                <div class="modal-footer">
+                                                  
+                                                  <button type="submit" class="btn btn-primary">OK</button></a>
+                                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Batalkan</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                             
                      </div>
                 </div>
               </div>
+              </div>
             </div>
+        </form>
 
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 </body>
-
 
 
  <script type="text/javascript">

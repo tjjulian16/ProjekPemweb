@@ -13,11 +13,12 @@
 
 
 </head>
-<body onload="startTime()">
+<body onload="startTime();">
+
 	
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
 	<img src="assets/logo.png" width="auto" height="35">
-  <a class="navbar-brand" href="#" style="margin-left: 1%;">Antar.in</a>
+  <a class="navbar-brand" href="LandingPage.php" style="margin-left: 1%;">Antar.in</a>
     <ul class="navbar-nav mr-auto">
 
     <!-- buat konten navbar nya
@@ -30,7 +31,7 @@
     	 	
     	 	<span class="caret"></span></a>
     	 	<ul class="dropdown-menu" style="min-width: 0px;">
-            <li><a href="#"><span class="fa fa-sign-out "></span> Keluar</a></li>
+            <li><a href="LandingPage.php"><span class="fa fa-sign-out "></span> Keluar</a></li>
           </ul>
     </div>
  </nav>
@@ -46,15 +47,15 @@
      <div class="col-md-3 col-sm-5 col-xs-5" style="margin: 2% 38%;">
   <div class ="card">
     <div class="card-body">
-        <form action="insert.php" method="POST">
-  <div class="form-group" ">
+        <form action="autentikasi.php" method="POST">
+  <div class="form-group"> 
     <label >Username: </label>
-    <input type="text" class="form-control" placeholder="Masukkan Username" name="Username">
+    <input type="text" class="form-control" placeholder="Masukkan Username" name="Username" required>
     <br>
     <label >Password:</label>
-    <input type="Password" class="form-control" placeholder="Masukkan Password" name="password">
+    <input type="Password" class="form-control" placeholder="Masukkan Password" name="password" required>
   </div>
-  <button type="submit" class="btn btn-primary" style="width: 45%; margin-left: 25%; border-radius: 15px;">Login</button>
+  <button type="submit" class="btn btn-primary" style="width: 45%; margin-left: 25%; border-radius: 15px;" >Login</button>
 </form>
         
      </div>
@@ -84,5 +85,11 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i}; 
     return i;
 }
+function alertGagal(){
+	alert("Username atau password salah");
+}
+
+
 	</script>
 </html>
+
