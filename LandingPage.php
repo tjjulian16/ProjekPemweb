@@ -1,8 +1,18 @@
+<?php
+function cekLogin(){
+
+
+session_start();
+if(!isset($_SESSION['pengguna'])){
+  $_SESSION['pengguna'] = null;
+}
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Antar.in</title>
-     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" >
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -13,7 +23,7 @@
 
 
 </head>
-<body onload="startTime()">
+<body onload="startTime(); " <?php  cekLogin(); ?>>
 	
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
 	<img src="assets/logo.png" width="auto" height="35">
@@ -26,11 +36,11 @@
     <p id="date"></p>
     <p id="time"></p>
     <div class="dropdown" style="margin-left: 2%; margin-right: 4%;">
-    	 <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome,
-    	 	
+    	 <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome
+       <?php echo "$_SESSION[pengguna]"; ?>
     	 	<span class="caret"></span></a>
     	 	<ul class="dropdown-menu" style="min-width: 0px;">
-            <li><a href="LandingPage.php"><span class="fa fa-sign-out "></span> Keluar</a></li>
+            <li><a href="#" onclick="logout();" ><span class="fa fa-sign-out "></span> Keluar</a></li>
           </ul>
     </div>
  </nav>
@@ -44,9 +54,9 @@
     <br>
     
         <div class="Login row">
-             <a href="User.php" class="col-lg-2 col-xs-9" id="user" style="border:2px solid #3ce819;">Masuk sebagai User</a>
-             <a href="login.php" class="col-lg-2 col-xs-9" id="admin"  style="border:2px solid #12a8bb">Masuk sebagai Admin</a>
-             <a href="login.php" class="col-lg-2 col-xs-9" id="manager" style="border:2px solid #d3e818;">Masuk sebagai Manager</a>
+             
+             <a href="login.php" class="col-lg-4 col-xs-4" id="admin"  style="border:2px solid #12a8bb;">Masuk ke Sistem</a>
+             
         </div>
      </div>
 </section>
@@ -75,5 +85,15 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i}; 
     return i;
 }
+function logout(){
+  window.location.href="logout.php";
+  alert(" Anda sudah logout \n Terima Kasih!");
+}
+
+
+
+
 	</script>
+
 </html>
+

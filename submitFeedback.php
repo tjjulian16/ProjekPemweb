@@ -2,7 +2,7 @@
 include "koneksiJulian.php";
 session_start();
 
-$id = $_SESSION['pengguna'];
+$id = $_SESSION['pengirim'];
 $feedback = $_POST['rating'];
 $insertFeedback = "INSERT INTO feedback VALUES('$id','$feedback')";
 

@@ -1,3 +1,25 @@
+<?php
+
+function cekLogin(){
+session_start();
+	if(isset($_SESSION['pengguna'])){
+		
+		if ($_SESSION['pengguna'] == 'user') {
+			header('location: User.php');
+		}
+		elseif ($_SESSION['pengguna'] == 'admin') {
+			header('location: User.php');
+		}
+		elseif ($_SESSION['pengguna'] == 'manager'){
+			header('location: manager.php');
+		}
+	}
+	elseif (!isset($_SESSION['pengguna'])) {
+		$_SESSION['pengguna'] = null;
+	}
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +35,7 @@
 
 
 </head>
-<body onload="startTime();">
+<body onload="startTime();<?php cekLogin(); ?>">
 
 	
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
@@ -27,11 +49,11 @@
     <p id="date"></p>
     <p id="time"></p>
     <div class="dropdown" style="margin-left: 2%; margin-right: 4%;">
-    	 <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome,
+    	 <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome
     	 	
     	 	<span class="caret"></span></a>
     	 	<ul class="dropdown-menu" style="min-width: 0px;">
-            <li><a href="LandingPage.php"><span class="fa fa-sign-out "></span> Keluar</a></li>
+            <li><a href="#" onclick="logout();"><span class="fa fa-sign-out "></span> Keluar</a></li>
           </ul>
     </div>
  </nav>
@@ -85,9 +107,11 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i}; 
     return i;
 }
-function alertGagal(){
-	alert("Username atau password salah");
+function logout(){
+  window.location.href="logout.php";
+  alert(" Anda sudah logout \n Terima Kasih!");
 }
+
 
 
 	</script>

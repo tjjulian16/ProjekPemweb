@@ -20,7 +20,7 @@
 	background-color:white;
 	padding: 15px;
 	border-radius: 20px;
-	margin-left: 12%;
+	margin-left: 33%;
 	text-align: center;
 	color: black;
 	font-size: 25px;
@@ -58,4 +58,13 @@
 width: 50%; height: auto;
 }
 
+.resi #boxResi{
+	border: 1px solid #12a8bb; text-align: center; margin: 0 5%;
+}
+.resi #boxFeedback{
+	border: 1px solid #12a8bb; text-align: center; padding-bottom: 2%;
+}
 
+.resi #headerResi{
+	font-weight: bold; border-bottom: 1px solid grey; padding-bottom: 2%;
+}

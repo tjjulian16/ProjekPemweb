@@ -10,15 +10,18 @@ $cek = mysqli_query($link,$query);
 if (mysqli_num_rows($cek) == 1){
 		session_start();
 		$_SESSION['status'] = 'sukses';
-		$_SESSION['nama'] = $inputUser;
-		
-		$_SESSION['pass']= $passwordUser;
 
 		if($inputUser == 'admin'){
-			header('location: User.php');
+			$_SESSION['pengguna'] = 'admin';
+			header('location: admin.php');
+		}
+		elseif ($inputUser == 'manajer'){
+			$_SESSION['pengguna'] = 'manager';
+			header('location: manajer.php');
 		}
 		else{
-			header('location: manajer.php');
+			$_SESSION['pengguna'] = 'user';
+			header('location: User.php');
 		}
 }
 else{

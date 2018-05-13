@@ -1,4 +1,12 @@
+<?php 
+function cekLogin(){
 
+session_start();
+if(!isset($_SESSION['pengguna'])){
+  $_SESSION['pengguna'] = null;
+}
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +32,7 @@
 </style>
 
 </head>
-<body onload="startTime()">
+<body onload="startTime() <?php cekLogin(); ?>">
 	
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
   <img src="assets/logo.png" width="auto" height="35">
@@ -37,11 +45,12 @@
     <p id="date"></p>
     <p id="time"></p>
     <div class="dropdown" style="margin-left: 2%; margin-right: 4%;">
-       <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome, User
+       <a data-toggle="dropdown" href="#" style="margin-top: 25px; color: white;">Welcome, <?php  echo "$_SESSION[pengguna]"; ?>
+
         
         <span class="caret"></span></a>
         <ul class="dropdown-menu" style="min-width: 0px;">
-            <li><a href="LandingPage.php"><span class="fa fa-sign-out "></span> Keluar</a></li>
+            <li><a href="#" onclick="logout();"><span class="fa fa-sign-out "></span> Keluar</a></li>
           </ul>
     </div>
  </nav>
@@ -260,6 +269,10 @@ function startTime() {
 function checkTime(i) {
     if (i < 10) {i = "0" + i}; 
     return i;
+}
+function logout(){
+  window.location.href="logout.php";
+  alert(" Anda sudah logout \n Terima Kasih!");
 }
 	</script>
 </html>
