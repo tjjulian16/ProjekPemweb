@@ -8,8 +8,9 @@ $query = "SELECT * FROM login WHERE username = '$inputUser' AND password = '$pas
 $cek = mysqli_query($link,$query);
 
 if (mysqli_num_rows($cek) == 1){
+		
 		session_start();
-		$_SESSION['status'] = 'sukses';
+		
 
 		if($inputUser == 'admin'){
 			$_SESSION['pengguna'] = 'admin';
@@ -20,13 +21,14 @@ if (mysqli_num_rows($cek) == 1){
 			header('location: manajer.php');
 		}
 		else{
-			$_SESSION['pengguna'] = 'user';
+			$_SESSION['pengguna'] = $inputUser;
 			header('location: User.php');
 		}
-}
+		echo "sukses";
+	}
 else{
-$_SESSION['status'] = 'gagal';
-header('location: login.php');
+echo "gagal";
+
 
 }
 

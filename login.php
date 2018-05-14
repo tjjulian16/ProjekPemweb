@@ -31,7 +31,8 @@ session_start();
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
 
 
 </head>
@@ -69,17 +70,17 @@ session_start();
      <div class="col-md-3 col-sm-5 col-xs-5" style="margin: 2% 38%;">
   <div class ="card">
     <div class="card-body">
-        <form action="autentikasi.php" method="POST">
+        <form  id ="login" method="POST" >
   <div class="form-group"> 
     <label >Username: </label>
-    <input type="text" class="form-control" placeholder="Masukkan Username" name="Username" required>
+    <input type="text" id="username" class="form-control" placeholder="Masukkan Username" name="Username" required>
     <br>
     <label >Password:</label>
-    <input type="Password" class="form-control" placeholder="Masukkan Password" name="password" required>
+    <input type="Password" id="password" class="form-control" placeholder="Masukkan Password" name="password" required>
   </div>
-  <button type="submit" class="btn btn-primary" style="width: 45%; margin-left: 25%; border-radius: 15px;" >Login</button>
+  <button  type="submit"  class="btn btn-primary"  style="width: 45%; margin-left: 25%; border-radius: 15px;" >Login</button>
 </form>
-        
+        <p id="cekHasil"></p>
      </div>
 </section>
 </body>

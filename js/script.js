@@ -1,39 +1,39 @@
 $(
 
   function() {
-    //alert('helo!');
-    $('#logout').click(
-
+    
+    $('#login').submit(
+      
       //function akan dijalankan saat button diklik
-      function(){
+      function(e){
+       
         //alert('Helo juga~');
-        var nilai = $('#something').val();
-        //alert(nilai);
-
-        //setting variabel ala json
-        var postdata = {
-          'n':nilai,
-          'x':2,
-          'y':false,
-          'z':"asoy"
-        };
-        //setting variabel ala ?
-        postdata =
-          "n="+nilai+"&x="+2+"&y=true&z=OKK";
+        var username = $('#username').val();
+        var password = $('#password').val();
         
-        $.post(
-          "random.php",
-          postdata,
-          function(data){
-            $('#hasil').html(data);
-
+        var credentials = {
+          'Username': username,
+          'password': password
+        };
+        
+        $.ajax({
+       type: "POST",
+       url: 'autentikasi.php',
+       data: credentials,
+       success: function(data)
+       {
+          if (data == 'sukses') {
+            alert(data);
           }
+          else {
 
-        );
-      }
+            alert('Invalid Credentials');
+          }
+       }
+      });
+
+     }
 
     );
-
   }
-
-);
+  );
