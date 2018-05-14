@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2018 at 06:40 PM
+-- Generation Time: May 14, 2018 at 09:54 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -46,7 +46,22 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`NO`, `no_resi`, `id_pengirim`, `id_penerima`, `nama_barang`, `berat_barang`, `ongkir`, `tanggal_pengiriman`, `jenis_layanan`, `status_barang`) VALUES
+(14, '222821', '459158', '932886', 'Handphone', 2, '60000', '13/05/2018', 'Regular', 'pending'),
+(13, '309405', '404620', '109026', 'kunci', 10, '150000', '13/05/2018', 'Regular', 'pending'),
+(17, '333484', '614840', '205895', 'Handphone', 3, '90000', '14/05/2018', 'Regular', 'pending'),
+(11, '335730', '131941', '471041', '', 0, '0', '13/05/2018', '', 'pending'),
+(9, '380757', '140490', '241597', '', 0, '0', '13/05/2018', '', 'pending'),
+(15, '394970', '619353', '130744', 'Handphone', 3, '105000', '13/05/2018', 'Cepat', 'pending'),
+(7, '439780', '166279', '199379', '', 0, '0', '13/05/2018', '', 'pending'),
+(8, '516571', '556771', '828202', '', 0, '0', '13/05/2018', '', 'pending'),
+(12, '583294', '359742', '231284', 'Handphone', 2, '60000', '13/05/2018', 'Regular', 'pending'),
+(5, '611588', '390462', '914117', '', 0, '0', '13/05/2018', '', 'pending'),
+(6, '678260', '731541', '260209', '', 0, '0', '13/05/2018', '', 'pending'),
+(4, '708365', '159216', '346268', 'Handphone', 3, '90000', '13/05/2018', 'Regular', 'pending'),
+(3, '753791', '191397', '189591', 'laptop', 2, '50000', '13/05/2018', 'Cepat', 'pending'),
+(10, '848638', '403188', '506719', '', 0, '0', '13/05/2018', '', 'pending'),
 (1, '899063', '146145', '367334', 'aa', 2, '60000', '12/05/2018', 'Regular', 'pending'),
+(16, '904433', '838394', '303082', 'Manusia', 3, '90000', '13/05/2018', 'Regular', 'pending'),
 (2, '959922', '102668', '162426', 'aa', 2, '60000', '12/05/2018', 'Regular', 'pending');
 
 -- --------------------------------------------------------
@@ -65,6 +80,13 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id_pengguna`, `feedback`) VALUES
+('159216', 10),
+('191397', 5),
+('359742', 10),
+('404620', 5),
+('614840', 10),
+('619353', 5),
+('838394', 10),
 ('952905', 5),
 ('958677', 10);
 
@@ -147,6 +169,7 @@ CREATE TABLE `login` (
 
 INSERT INTO `login` (`username`, `password`) VALUES
 ('admin', 'admin'),
+('julian', 'rahasia'),
 ('manager', 'manager');
 
 -- --------------------------------------------------------
@@ -171,9 +194,24 @@ CREATE TABLE `penerima` (
 --
 
 INSERT INTO `penerima` (`id_penerima`, `no_resi`, `namaPenerima`, `alamatPenerima`, `kodePosTujuan`, `kotaTujuan`, `provinsiTujuan`, `notelTujuan`) VALUES
+('109026', '309405', 'hareh', 'malang jaya', '21212', 'DKI Jakarta', 'Surabaya', '1111'),
+('130744', '394970', 'joel', 'asd', '65155', 'DKI Jakarta', 'Jakarta', '13131'),
 ('162426', '959922', 'ada', 'ada', '123', 'Jawa Barat', 'Malang', '123'),
+('189591', '753791', 'nov', 'malang jaya', '15154', 'Jawa Timur', 'Malang', '01001'),
+('199379', '439780', '', '', '', '', '', ''),
+('205895', '333484', 'NOVITA', 'malang jaya', '123', 'DKI Jakarta', 'Jakarta', '08777817470'),
+('231284', '583294', 'NOVITA', 'MAYJEND PANJAITAN', '65155', 'Jawa Timur', 'Malang', '08777817470'),
+('241597', '380757', '', '', '', '', '', ''),
+('260209', '678260', '', '', '', '', '', ''),
+('303082', '904433', 'adad', '123', '65155', 'Jawa Timur', 'Surabaya', '08777817470'),
+('346268', '708365', '123', 'MAYJEND PANJAITAN', '21212', 'DKI Jakarta', 'Jakarta', '13131'),
 ('367334', '899063', 'ada', 'ada', '123', 'Jawa Barat', 'Malang', '123'),
-('687946', '317283', 'ada', 'ada', '123', 'Jawa Barat', 'Malang', '123');
+('471041', '335730', '', '', '', '', '', ''),
+('506719', '848638', '', '', '', '', '', ''),
+('687946', '317283', 'ada', 'ada', '123', 'Jawa Barat', 'Malang', '123'),
+('828202', '516571', '', '', '', '', '', ''),
+('914117', '611588', '', '', '', '', '', ''),
+('932886', '222821', 'JUL', 'malang jaya', '21212', 'DKI Jakarta', 'Jakarta', '13131');
 
 -- --------------------------------------------------------
 
@@ -198,8 +236,23 @@ CREATE TABLE `pengirim` (
 
 INSERT INTO `pengirim` (`idPengirim`, `no_resi`, `namaPengirim`, `alamatPengirim`, `kodePosAsal`, `provinsiAsal`, `kotaAsal`, `notelAsal`) VALUES
 ('102668', '959922', 'a', 'a', '123', 'Jawa Barat', 'Jakarta', '123'),
+('131941', '335730', '', '', '', '', '', ''),
+('140490', '380757', '', '', '', '', '', ''),
 ('146145', '899063', 'a', 'a', '123', 'Jawa Barat', 'Jakarta', '123'),
-('733726', '317283', 'a', 'a', '123', 'Jawa Barat', 'Jakarta', '123');
+('159216', '708365', 'ju', 'bogorara', '16155', 'Jawa Timur', 'Malang', '0231'),
+('166279', '439780', '', '', '', '', '', ''),
+('191397', '753791', 'julian', 'danau bogor', '16115', 'Jawa Timur', 'Surabaya', '0812345'),
+('359742', '583294', 'TIMOTHY JULIAN', 'DANAU BOGOR RAYA', '16155', 'DKI Jakarta', 'Jakarta', '0812345'),
+('390462', '611588', '', '', '', '', '', ''),
+('403188', '848638', '', '', '', '', '', ''),
+('404620', '309405', 'TIMOTHY JULIAN', 'ADAD', '123', 'Jawa Timur', 'Surabaya', '12333'),
+('459158', '222821', 'TIMOTHY JULIAN', 'DANAU BOGOR RAYA', '16155', 'Jawa Timur', 'Surabaya', '1233'),
+('556771', '516571', '', '', '', '', '', ''),
+('614840', '333484', 'TIMOTHY JULIAN', 'DANAU BOGOR RAYA', '123', 'DKI Jakarta', 'Surabaya', '123'),
+('619353', '394970', 'TIMOTHY JULIAN', 'DANAU BOGOR RAYA', '16155', 'Jawa Timur', 'Surabaya', '1233'),
+('731541', '678260', '', '', '', '', '', ''),
+('733726', '317283', 'a', 'a', '123', 'Jawa Barat', 'Jakarta', '123'),
+('838394', '904433', 'juliannnnn', 'bogorara', '123', 'DKI Jakarta', 'Jakarta', '123');
 
 --
 -- Indexes for dumped tables
@@ -261,7 +314,7 @@ ALTER TABLE `pengirim`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `NO` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `NO` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `harga`
 --
