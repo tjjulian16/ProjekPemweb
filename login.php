@@ -4,16 +4,17 @@ function cekLogin(){
 session_start();
 	if(isset($_SESSION['pengguna'])){
 		
-		if ($_SESSION['pengguna'] == 'user') {
-			header('location: User.php');
-		}
-		elseif ($_SESSION['pengguna'] == 'admin') {
-			header('location: User.php');
+		
+		if ($_SESSION['pengguna'] == 'admin') {
+			header('location: admin.php');
 		}
 		elseif ($_SESSION['pengguna'] == 'manager'){
 			header('location: manager.php');
 		}
-	}
+    else{
+      header('location: User.php');
+    }
+    }
 	elseif (!isset($_SESSION['pengguna'])) {
 		$_SESSION['pengguna'] = null;
 	}
