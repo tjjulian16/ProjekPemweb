@@ -68,7 +68,7 @@ if(!isset($_SESSION['pengguna'])){
                     
                     <h3 style="text-align: center;">Data Pengirim</h3>
                         <div>
-                                <form  action="controllerDatabase.php" method="post">
+                                <form  action="controllerDatabase.php" action="keduacekstatus.php" method="post">
                                     <div class="form-group">
                                         <label for="text">Nama Lengkap:</label>
                                         <input type="text" class="form-control" name="namaPengirim" required>
