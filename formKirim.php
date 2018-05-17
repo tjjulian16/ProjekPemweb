@@ -211,7 +211,7 @@ if(!isset($_SESSION['pengguna'])){
                             </div>
                       <div class="col-md-5" style="margin-left: 5%; margin-top: 5%;">
                           <div>
-                                <button type="button" class="btn btn-lg submitButton" data-toggle = "modal" data-target="#notif">Submit
+                                <button type="button" class="btn btn-lg submitButton" id="submit" >Submit
                                 </button>
                              
                             </div>
@@ -274,5 +274,10 @@ function logout(){
   window.location.href="logout.php";
   alert(" Anda sudah logout \n Terima Kasih!");
 }
+$(document).ready(function(){
+    $("#submit").click(function(){
+        $("#notif").modal("toggle");
+    });
+});
 	</script>
 </html>

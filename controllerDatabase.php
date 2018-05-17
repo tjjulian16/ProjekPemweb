@@ -32,6 +32,7 @@ $getHarga = "SELECT biaya FROM harga WHERE kota_asal = '$kotaAsal'  AND kota_tuj
 $hasil = mysqli_query($link,$getHarga);
 $result = mysqli_fetch_array($hasil);
 $ongkir = $result['biaya'] * $berat; 
+$namaKurir = '';
 
 //DATA RESI
 $_SESSION['pengirim'] = $id_pengirim;
@@ -39,11 +40,11 @@ $_SESSION['penerima'] = $id_penerima;
 $_SESSION['resi'] = $no_resi;
 
 
-$insertDataBarang = "INSERT INTO barang  VALUES ('','$no_resi','$id_pengirim','$id_penerima','$nama_barang','$berat','$ongkir','$tanggal','$layanan','pending')";
+$insertDataBarang = "INSERT INTO barang  VALUES ('','$no_resi','$id_pengirim','$id_penerima','$nama_barang','$berat','$ongkir','$tanggal','$layanan','pending','$namaKurir')";
 
 $insertDataPengirim = "INSERT INTO pengirim VALUES ('$id_pengirim','$no_resi','$namaPengirim','$alamatPengirim','$kodePosAsal','$provinsiAsal','$kotaAsal','$notelAsal')";
 
-$insertDataPenerima = "INSERT INTO penerima VALUES ('$id_penerima','$no_resi','$namaPenerima','$alamatPenerima','$kodePosTujuan', '$provinsiTujuan','$kotaTujuan','$notelTujuan')";
+$insertDataPenerima = "INSERT INTO penerima VALUES ('$id_penerima','$no_resi','$namaPenerima','$alamatPenerima','$kodePosTujuan', '$kotaTujuan','$provinsiTujuan','$notelTujuan')";
 
 
 mysqli_query($link,$insertDataPengirim);

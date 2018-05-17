@@ -32,7 +32,7 @@ session_start();
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 </head>
@@ -78,7 +78,7 @@ session_start();
     <label >Password:</label>
     <input type="Password" id="password" class="form-control" placeholder="Masukkan Password" name="password" required>
   </div>
-  <button  type="submit"  class="btn btn-primary"  style="width: 45%; margin-left: 25%; border-radius: 15px;" >Login</button>
+  <button  type="submit"  class="btn btn-primary" style="width: 45%; margin-left: 25%; border-radius: 15px;" >Login</button>
 </form>
         <p id="cekHasil"></p>
      </div>

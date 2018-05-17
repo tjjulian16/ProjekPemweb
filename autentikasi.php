@@ -27,11 +27,7 @@ if (mysqli_num_rows($cek) == 1){
 		echo "sukses";
 	}
 else{
-echo "gagal";
-
-
+header('location: login.php');
 }
-
-
 
 ?>

@@ -109,7 +109,9 @@ $returnBarang = mysqli_fetch_array($hasilBarang);
                 <h3>Rating 1-10</h3>
               <form action="submitFeedback.php" method="POST">
                <input type="number" name="rating" class="form-control" style="font-size: 45px; height: 90px; text-align: center;" min="0" max="10" value="0">
-               <button type="button" class="btn btn-lg btn-primary" style="margin-top: 5%;" data-toggle="modal" data-target="#notif">Kirim</button>
+               <button type="button" class="btn btn-lg btn-primary" style="margin-top: 5%;" id="submit">Kirim</button>
+
+
                <div class="modal fade" id="notif" role="dialog">
                                             <div class="modal-dialog modal-md">
                                               <div class="modal-content">
@@ -173,5 +175,10 @@ $returnBarang = mysqli_fetch_array($hasilBarang);
   alert(" Anda sudah logout \n Terima Kasih!");
 }
 
+$(document).ready(function(){
+    $("#submit").click(function(){
+        $("#notif").modal("toggle");
+    });
+});
 </script>
 </html>
