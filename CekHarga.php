@@ -32,7 +32,6 @@ $hasil = mysqli_fetch_array($harga);
   text-align: center;
 }
 
-
 #content1{ 
   height:300px;
   width: 1100px; 
@@ -50,7 +49,7 @@ ery/1.11.3/jquery.min.js"></script>
   $(document).ready(function()
   {
     $("#demo").mouseover(function() {    
-      $("#demo").css("background-color", "red");
+      $("#demo").css("background-color","red");
       $("#demo").text("KLIK UNTUK CEK HARGA!");
     });
     $("#demo").mouseout(function() {    
@@ -121,11 +120,9 @@ ery/1.11.3/jquery.min.js"></script>
             </div>
  </div>        
   <button type="submit" value="submit" name = "submit" style="margin-top: 3%" id="demo" onmouseover="mouseover()" onmouseout="mouseout()">CEK HARGA SEKARANG</button>
- </div> 
- <div id="txtHint" style = "color: black; text-align: justify; margin-left: 25% "><b>Biaya Pengiriman Di Antar.in</b></div>   
- <div id="content2"> 
-</div>
+ </div>    
 </form>
+<div id="txtHint" style = "color: black; text-align: justify; margin-left: 25% "><b>Biaya Pengiriman Di Antar.in</b></div>
 <div style = "color: black; text-align: justify; margin-left: 25%">
  <h5>Dari : <?php echo $_POST['KotaPengiriman'], '-', $_POST['KotaPenerima'];?>
  <h5>Dengan Berat : <?php echo $BeratBarang,' Kg';?>
