@@ -61,7 +61,7 @@ if(!isset($_SESSION['pengguna'])){
  <div class="col-md-6 col-sm-12" id="boxFeedback" style="border:1px solid grey; padding-bottom: 80px; margin-left: 1%;">
               <h2 id="headerResi">User Satisfication </h2>
                 <h1 style="margin-top: 6%;"><?php
-                $koneksi     = mysqli_connect("localhost", "root", "", "anterin");
+                $koneksi     = mysqli_connect("localhost", "root", "admin", "anterin");
                   $avg          = mysqli_query($koneksi, "SELECT AVG(feedback) as rerata from feedback");
                   $d = mysqli_fetch_array($avg);
                   printf("%1\$.1f",$d[0]);

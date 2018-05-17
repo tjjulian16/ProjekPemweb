@@ -61,7 +61,7 @@ if(!isset($_SESSION['pengguna'])){
  <div class="col-md-6 col-sm-12" id="boxFeedback" style="border:1px solid grey; padding-bottom: 80px; margin-left: 1%;">
               <h2 id="headerResi">User Satisfication </h2>
                 <h1 style="margin-top: 6%;"><?php
-                $koneksi     = mysqli_connect("localhost", "root", "", "anterin");
+                $koneksi     = mysqli_connect("localhost", "root", "admin", "anterin");
                   $avg          = mysqli_query($koneksi, "SELECT AVG(feedback) as rerata from feedback");
                   $d = mysqli_fetch_array($avg);
                   printf("%1\$.1f",$d[0]);
@@ -79,3 +79,33 @@ if(!isset($_SESSION['pengguna'])){
                   echo "<script>alert('Sistem anda baik, terus tingkatakan!');</script>";
                   echo "Sistem anda baik, terus tingkatkan";
 ?>
+
+ <script type="text/javascript">
+      n =  new Date();
+      y = n.getFullYear();
+      m = n.getMonth() + 1;
+      d = n.getDate();
+      document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+      
+      function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('time').innerHTML =
+          h + ":" + m + ":" + s;
+          var t = setTimeout(startTime, 500);
+      }
+
+      function checkTime(i) {
+          if (i < 10) {i = "0" + i}; 
+          return i;
+      }
+//FUNGSI LOGOUT 
+     function logout(){
+  window.location.href="logout.php";
+  alert(" Anda sudah logout \n Terima Kasih!");
+}
+</script>

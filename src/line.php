@@ -3,7 +3,7 @@
 include("Charts.class.php");
 $hostdb = "localhost"; // MySQl host
 $userdb = "root"; // MySQL username
-$passdb = ""; // MySQL password
+$passdb = "admin"; // MySQL password
 $namedb = "anterin"; // MySQL database name
 $dbhandle = new mysqli($hostdb, $userdb, $passdb, $namedb);
 

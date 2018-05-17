@@ -14,11 +14,11 @@ if (mysqli_num_rows($cek) == 1){
 
 		if($inputUser == 'admin'){
 			$_SESSION['pengguna'] = 'admin';
-			header('location: admin.php');
+			header('location: menuAdmin.php');
 		}
-		elseif ($inputUser == 'manajer'){
+		elseif ($inputUser == 'manager'){
 			$_SESSION['pengguna'] = 'manager';
-			header('location: manajer.php');
+			header('location: manager.php');
 		}
 		else{
 			$_SESSION['pengguna'] = $inputUser;

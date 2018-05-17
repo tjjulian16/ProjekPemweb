@@ -1,6 +1,6 @@
 <?php 
 error_reporting(0);
-include "koneksiRevantio.php";
+include "koneksiJulian.php";
 $KotaPengiriman = $_POST['KotaPengiriman'];
 $KotaTujuan = $_POST['KotaPenerima'];
 $JenisPaket = $_POST['JenisPaket'];

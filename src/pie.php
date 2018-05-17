@@ -3,7 +3,7 @@
 
 $hostdb = "localhost"; 
 $userdb = "root"; 
-$passdb = "";
+$passdb = "admin";
 $namedb = "anterin"; 
 $dbhandle = new mysqli($hostdb, $userdb, $passdb, $namedb);
 
