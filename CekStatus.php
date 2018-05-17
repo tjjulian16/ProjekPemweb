@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,6 +40,7 @@
   height: 800px;
   max-width: 500px; 
   background-color: white; 
+  opacity: 0.9;
   padding-top: 3%;
 }
 
@@ -98,28 +101,31 @@ ery/1.11.3/jquery.min.js"></script>
 <div style="color: black; text-align: justify; margin-left: 3%;">
   <h1>Cek Status</h1>
 </div>
-   <form action="" method="post" style="border-bottom: 3px solid #caceab">
-      <div style="margin:1% 2% 5% 4%; color: #808080; ">
+   <form action="keduacekstatus.php" method="post" style="border-bottom: 3px solid #caceab">
+      <div type="text" style="margin:1% 2% 5% 4%; color: #808080; "  >
       <label for="noResi" ><h5 style="color: black">Masukkan No Resi Anda Disini</h5></label>
-      <input type="noResi" class="form-control" id="noResi" placeholder="No Resi" style="max-width: 500px">
-      <button type="submit" style="margin-top: 3%" id="demo" onmouseover="mouseover()" onmouseout="mouseout()">CEK STATUS SEKARANG?</button>
+      <input type="noResi" class="form-control" id="noResi" placeholder="No Resi" name="noResi" style="max-width: 500px">
+      <button type="submit" style="margin-top: 3%" id="demo" onmouseover="mouseover()" onmouseout="mouseout()" name="submit">CEK STATUS SEKARANG?</button>
     </div>
    </form>
+
+
+
 <div id="Paragraf">
-  <h3 style="color: black"> Cek Status Antar.in</h3>
+  <h3 style="color: black; margin-left: 3%;"> Cek Status Antar.in</h3>
   <p style="color: black"> Kirim barang di Antar.in sekarang ngga perlu khawatir! Disini kamu bisa cek status pengiriman barang kamu sudah sampai mana. Jadi, kamu bisa pantau terus deh, proses pengirimannya :D</p>
   <h4 style="color: black"> Gimana? Percaya kan buat di Antar.in?</h4>
 </div>
-<div class="container-fluid" style="padding-bottom: 10%; padding-right: 10%">
+<div class="container-fluid" style="padding-bottom: 10%; padding-right: 15%">
 <h3 style="color: black">CONTACT</h3>
-            <div class="row" style="padding-bottom: 1px; padding-left: 15%">
-                <div class="col-4">
+            <div class="row" style="padding-bottom: 1px; padding-left: 5%">
+                <div class="col-3">
                   <a href="#"><i class="fa fa-twitter fa-2x" id="g1"></i></a>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                   <a href="#"><i class="fa fa-google-plus fa-2x" id="g1" "></i></a>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                   <a href="#"><i class="fa fa-facebook fa-2x" id="g1" "></i></a>
                 </div>
             </div>
