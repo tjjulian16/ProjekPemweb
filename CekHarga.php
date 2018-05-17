@@ -122,7 +122,7 @@ ery/1.11.3/jquery.min.js"></script>
  </div>        
   <button type="submit" value="submit" name = "submit" style="margin-top: 3%" id="demo" onmouseover="mouseover()" onmouseout="mouseout()">CEK HARGA SEKARANG</button>
  </div> 
- <div id="txtHint" style = "color: black; text-align: justify; margin-left: 25% "><b>Harga Akan ditampilkan</b></div>   
+ <div id="txtHint" style = "color: black; text-align: justify; margin-left: 25% "><b>Biaya Pengiriman Di Antar.in</b></div>   
  <div id="content2"> 
 </div>
 </form>
