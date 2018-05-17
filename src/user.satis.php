@@ -67,56 +67,5 @@ if(!isset($_SESSION['pengguna'])){
                   printf("%1\$.1f",$d[0]);
                   ?></h1>
                   <h2> From 10.0 </h2>
-                  <button onclick="window.location.href='user.satis.php'">Lihat Rekomendasi</button>
-  
+                  <button onclick="window.location.href='src/line.php'">Lihat Rekomendasi</button>    
                 </div>
-                <div id="chart-1" class="col-md-5 col-sm-12">
-                    </div>
-                    <button onclick="window.location.href='src/line.php'">Lihat Rekomendasi</button>  
-                  </div>         
-</div>
- <div class="resi row">
-  <div class="col-md-12">
-  <div class="col-md-5 col-sm-12" style="margin-right: 9%;">
-    <div id="chart-3"> </div> <button onclick="window.location.href='src/line.php'">Lihat Rekomendasi</button> 
-  </div>
-  <div class="col-md-5 col-sm-12">
-    <div id="chart-2"></div><button onclick="window.location.href='src/line.php'">Lihat Rekomendasi</button>
-  </div>
-  </div>
-  </div>
-</div>          
-</section>
-</body>
-
- <script type="text/javascript">
-      n =  new Date();
-      y = n.getFullYear();
-      m = n.getMonth() + 1;
-      d = n.getDate();
-      document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-      
-      function startTime() {
-          var today = new Date();
-          var h = today.getHours();
-          var m = today.getMinutes();
-          var s = today.getSeconds();
-          m = checkTime(m);
-          s = checkTime(s);
-          document.getElementById('time').innerHTML =
-          h + ":" + m + ":" + s;
-          var t = setTimeout(startTime, 500);
-      }
-
-      function checkTime(i) {
-          if (i < 10) {i = "0" + i}; 
-          return i;
-      }
-//FUNGSI LOGOUT 
-     function logout(){
-  window.location.href="logout.php";
-  alert(" Anda sudah logout \n Terima Kasih!");
-}
-</script>
-<script>alert('Selamat datang manager!');</script>
-</html>
